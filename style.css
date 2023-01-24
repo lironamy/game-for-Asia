@@ -1,0 +1,202 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: black;
+    position: relative;
+}
+
+canvas {
+    min-height: 30vh;
+    max-width: 60vh;
+    position: absolute;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%,0%);
+    padding: 60px;
+}
+
+p{
+    text-align:center  !important; 
+    padding: 10px;
+}
+
+span{
+    font-family: "Arcade Classic";
+    letter-spacing: 4px;
+    font-size: 20px;
+    color: #fff;
+    text-shadow:
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px rgb(176, 65, 190),
+        0 0 25px rgb(176, 65, 190),
+        0 0 35px rgb(176, 65, 190),
+        0 0 45px rgb(176, 65, 190),
+        0 0 55px rgb(176, 65, 190),
+        0 0 65px rgb(176, 65, 190),
+        0 0 75px rgb(176, 65, 190),
+        0 0 85px rgb(176, 65, 190);                                
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    text-shadow:
+    0 0 5px rgb(0, 0, 0),
+    0 0 10px rgb(0, 0, 0),
+    0 0 15px rgb(190, 182, 65),
+    0 0 25px rgb(190, 182, 65),
+    0 0 35px rgb(190, 182, 65),
+    0 0 45px rgb(190, 182, 65),
+    0 0 55px rgb(190, 182, 65),
+    0 0 65px rgb(190, 182, 65),
+    0 0 75px rgb(190, 182, 65),
+    0 0 85px rgb(190, 182, 65);
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    margin-top: 100px;
+    margin-left: 60px;
+}
+
+#start{
+    position: fixed;
+    left: 40% !important;
+    top: 500px !important;
+    font-family: "Arcade Classic";
+    letter-spacing: 4px;
+    font-size: 4em;   
+}
+#pac-logo{
+    position: fixed;
+    top: 100px !important;
+    left: 40% !important;
+    right: -50% !important;
+    min-height: 10vh;
+    max-width: 50vh;
+}
+#ghost-logo{
+    position: absolute;
+    left: -50px;
+    top: 500px !important;
+    min-height: 10vh;
+    max-width: 50vh;
+}
+
+#game-over {
+    position: absolute;
+    left: 40% !important;
+    top: 500px !important;
+    font-family: "Arcade Classic";
+    letter-spacing: 4px;
+    font-size: 4em;   
+    color: red;
+}
+#game-over a {
+    position: fixed;
+    left: 38% !important;
+    top: 800px !important;
+}
+#game-over h2{
+    color: red;
+    position: fixed;
+    left: 35% !important;
+    top: 350px !important;
+    font-size: 2em;
+}
+#win-game {
+    position: absolute;
+    left: 40% !important;
+    top: 500px !important;
+    font-family: "Arcade Classic";
+    letter-spacing: 4px;
+    font-size: 4em;   
+}
+#win-game a {
+    position: fixed;
+    left: 38% !important;
+    top: 800px !important;
+
+}
+#win-game h2{
+    color: green;
+    position: fixed;
+    left: 38% !important;
+    top: 350px !important;
+    font-size: 3em;
+}
+
+
+.pacman::before,
+.pacman::after{
+    content: " ";
+    position: fixed;
+    background: yellow;
+    width: 100px;
+    height: 50px;
+    margin-left: 150px;
+    margin-top: -30px;
+    border-radius: 50px 50px 0 0 ;
+    animation: up 0.4s infinite;
+}
+
+.pacman::after{
+    margin-top: 20px;
+    border-radius: 0 0 50px 50px;
+    animation: down 0.4s infinite;
+}
+
+.dot{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-top: 1px;
+    margin-left: 250px;
+    border-radius: 50%;
+    background: yellow;
+    box-shadow: 40px 0 0 yellow, 80px 0 0 yellow, 120px 0 0 yellow;
+    animation: right_to_left 0.4s infinite;
+}
+
+.pacman{
+    min-height: 1vh;
+    max-width: 50vh;
+}
+.dot{
+    min-height: 0.5vh;
+    max-width: 50vh;
+}
+
+@keyframes up{
+    0%,100%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(-40deg);
+    }
+}
+@keyframes down{
+    0%,100%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(40deg);
+    }
+}
+
+@keyframes right_to_left{
+    100%{
+        margin-left: 200px;
+    }
+}
+
+h6{
+   position: fixed;
+    bottom: 1%;
+    left: 1.5%;
+    color: white;
+}
+

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pac-Man</title>
+    <link rel="Icon" type="png" href="icons/retro-game-4744436-3951218.png">
+    <link href="//db.onlinewebfonts.com/c/7bc71114a54a06cbaf716a3264b70bd6?family=Arcade+Classic" rel="stylesheet" type="text/css"/>         
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <p>
+            <span id="score" style="display: none;">SCORE: </span><span id="scoreEL"></span>
+        </p>
+        <canvas id="canvas">
+            
+        </canvas>
+    <div id="start" style="display: block;"> 
+        <img id="pac-logo" src="icons/1600x960_192284-thelogicalindianfb1000x600-1.png">
+        <div class="pacman"></div>
+        <div class="dot"></div>
+        <a href="#" onclick="startGame()">Start Game</a>
+        <img id="ghost-logo" src="icons/1600x960_192284-thelogicalindianfb1000x600-155.png">
+    </div>        
+    <div id="game-over" style="display: none;" >
+        <img id="pac-logo" src="icons/1600x960_192284-thelogicalindianfb1000x600-1.png">
+        <h2>Game Over</h2>
+        <span id="score" style="display: none;">SCORE: </span><span id="scoreEL"></span>
+        <a href="" onclick="startGame()">Start Again?</a>
+        <img id="ghost-logo" src="icons/1600x960_192284-thelogicalindianfb1000x600-155.png">
+
+    </div>        
+    <div id="win-game" style="display: none;" >
+        <img id="pac-logo" src="icons/1600x960_192284-thelogicalindianfb1000x600-1.png">
+        <h2>Winner!</h2>
+        <span id="score" style="display: none;">SCORE: </span><span id="scoreEL"></span>
+        <a href="" onclick="startGame()">Start Again?</a>
+        <img id="ghost-logo" src="icons/1600x960_192284-thelogicalindianfb1000x600-155.png">
+    </div>        
+    </canvas>
+    <h6 style="display: block;">© Liron Lin Avraham</h6>
+    <script src="index.js"></script>
+</body>
+</html>
